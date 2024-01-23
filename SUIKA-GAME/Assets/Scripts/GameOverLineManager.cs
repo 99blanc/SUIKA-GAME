@@ -70,13 +70,13 @@ public class GameOverLineManager : MonoBehaviour
             }
             else
             {
-                spriteRenderer.color = new Color(0f, 0f, 0f, 0f); // 일반 상태에서는 alpha(투명도?)값을 바꿔 표시하지 않는다
+                spriteRenderer.color = new Color(0f, 0f, 0f, 0.1f); // 일반 상태에서는 alpha(투명도?)값을 바꿔 표시하지 않는다
             }
         }
         else
         {
             overTime = 0; // _isStable 인자가 false일 때 경과 시간을 0으로 초기화한다
-            spriteRenderer.color = new Color(0f, 0f, 0f, 0f); // 일반 상태에서는 alpha(투명도?)값을 바꿔 표시하지 않는다
+            spriteRenderer.color = new Color(0f, 0f, 0f, 0.1f); // 일반 상태에서는 alpha(투명도?)값을 바꿔 표시하지 않는다
             SoundManager.Play.StopEffect("WarnAlert1"); // 사운드 이름으로 사운드 중지
         }
     }
