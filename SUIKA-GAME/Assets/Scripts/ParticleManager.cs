@@ -56,6 +56,7 @@ public class ParticleManager : MonoBehaviour
                     if (particleEffect[i].name.Equals(showParticleName[j]) == false) // 효과음이 실행중이지 않다면
                     {
                         GameObject _particle = Instantiate(particleEffect[i].effect.gameObject, _position, particleEffect[i].effect.transform.rotation);
+                        _particle.GetComponent<ParticleSystem>().Play();
                         // 파티클 게임 오브젝트를 저장된 포지션에 맞게 생성한다
                         showParticleName[j] = _particleName; // 실행 중인 사운드 이름을 효과음 사운드 이름으로 저장한다
                         showParticleGameObject[j] = _particle; // 실행 중인 파티클 게임 오브젝트를 파티클 게임 오브젝트로 저장한다

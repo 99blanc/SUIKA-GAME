@@ -4,7 +4,7 @@ public class OptionController : MonoBehaviour
 {
     [SerializeField] private GameObject[] optionInterface; // 옵션 게임 오브젝트를 배열로 저장한 게임 오브젝트 변수 값
 
-    private bool isStated; // 재개 또는 일시정지 상태를 지정하는 상태 참 or 거짓인 불리언 값
+    public static bool isStated; // 재개 또는 일시정지 상태를 지정하는 상태 참 or 거짓인 불리언 값
 
     private void Update() // 업데이트 메소드
     {
