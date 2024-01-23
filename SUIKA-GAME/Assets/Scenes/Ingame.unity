@@ -1867,6 +1867,7 @@ MonoBehaviour:
   backgroundSlider: {fileID: 1558573621}
   effectSlider: {fileID: 919262301}
   mouseSpeedSlider: {fileID: 498882357}
+  isIngame: 1
 --- !u!4 &922556712
 Transform:
   m_ObjectHideFlags: 0

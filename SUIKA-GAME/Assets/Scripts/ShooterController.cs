@@ -14,7 +14,7 @@ public class ShooterController : MonoBehaviour
     [SerializeField] private float shootDelay = 1.2f; // 슈팅 딜레이를 조절하는 실수 값
 
     private int currentPlanetNumber; // 랜덤 값 1 ~ 3레벨 사이의 랜덤 행성의 인덱스 값을 가진 정수 변수를 지정하기 위한 값
-    private float fixShooterSpeed = 10f; // 마우스 속도 보간값(마우스 속도는 0이 되면 슈터가 움직일 수 없기 때문에 설정한다)
+    private float fixShooterSpeed = 20f; // 마우스 속도 보간값(마우스 속도는 0이 되면 슈터가 움직일 수 없기 때문에 설정한다)
     private bool isShootDelayed; // 슈팅 딜레이 여부를 결정하는 참 or 거짓인 불리언 값
     private GameObject stuff; // 게임 오브젝트를 지정한 변수 값
     private SpriteRenderer spriteRender;
@@ -27,8 +27,6 @@ public class ShooterController : MonoBehaviour
     private void OnShooterInit() // 슈터 생성 메소드
     {
         stuff = new GameObject("Planet"); // 빈 오브젝트의 이름을 Planet이라 설정한 뒤 stuff 게임 오브젝트 변수에 저장한다
-        shooterSpeed = fixShooterSpeed + shooterSpeed * PlayerPrefs.GetFloat("MouseSpeed");
-        // 마우스 속도 보간으로 옵션에서 설정한 마우스 값 적용
         spriteRender = GetComponent<SpriteRenderer>();
         spawnPoint = transform;
     }
@@ -41,6 +39,9 @@ public class ShooterController : MonoBehaviour
 
     private void OnMouseCursor() // 마우스 커서 입력을 통해 슈터를 이동시키는 메소드
     {
+        shooterSpeed = fixShooterSpeed + shooterSpeed * PlayerPrefs.GetFloat("MouseSpeed");
+        // 마우스 속도 보간으로 옵션에서 설정한 마우스 값 적용
+
         float _horizontal = Input.GetAxis("Mouse X"); // Mouse X => (만약 키보드 입력이면...) Horizontal, 마우스 커서 입력 실수 값
         float _speed = _horizontal * Time.deltaTime * shooterSpeed; // 슈터의 속도를 시간 단위로 움직이기 위한 값
 
