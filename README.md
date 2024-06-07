@@ -19,6 +19,6 @@
 ## 3. 개발 기간
 - 2023.10 - 2023.11(2주일)
 ## 4. 개발 환경
-- Windows 11, Unity Editor 2022.3.11f1, VisualStudio 2022, JsonSerialize 1.0.0, CsvHelper 30.0.1
+- Windows 11, Unity Editor 2022.3.11f1, VisualStudio 2022 - 17.7.6, JsonSerialize 1.0.0, CsvHelper 30.0.1
 ## 5. 관련 영상
 - [Youtube](https://youtu.be/zwoIGT1O2zY?si=DTVF9J3VoN93kIKf)
